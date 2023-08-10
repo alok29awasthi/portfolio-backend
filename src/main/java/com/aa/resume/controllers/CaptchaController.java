@@ -18,7 +18,6 @@ public class CaptchaController {
     @Autowired
     private CaptchaUtil captchaUtil;
 
-    @CrossOrigin(origins = {"http://localhost:3000", "https://portfolio-awasthi-af5a08f59471.herokuapp.com"})
     @GetMapping(value = "/captcha", produces = MediaType.IMAGE_PNG_VALUE)
     public String getCaptchaImage() throws IOException {
         BufferedImage captchaImage = captchaUtil.generateCaptchaImage();
@@ -28,7 +27,6 @@ public class CaptchaController {
         return Base64.getEncoder().encodeToString(baos.toByteArray());
     }
 
-    @CrossOrigin(origins = {"http://localhost:3000", "https://portfolio-awasthi-af5a08f59471.herokuapp.com"})
     @PostMapping(value = "/captcha-validation")
     public boolean validateCaptcha(@RequestBody String captchaAnswer) throws UnsupportedEncodingException {
         return captchaUtil.validateCaptcha(captchaAnswer.substring(0, captchaAnswer.length() - 1));
