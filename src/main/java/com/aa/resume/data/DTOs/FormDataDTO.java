@@ -1,10 +1,10 @@
 package com.aa.resume.data.DTOs;
 
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Builder
 @Data
+@NoArgsConstructor
 public class FormDataDTO {
 
     private String firstName;
