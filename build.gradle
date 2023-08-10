@@ -12,10 +12,6 @@ jar {
 	}
 }
 
-bootJar {
-	exclude("META-INF/MANIFEST.MF")
-}
-
 group = 'com.aa'
 version = '0.0.1-SNAPSHOT'
 
