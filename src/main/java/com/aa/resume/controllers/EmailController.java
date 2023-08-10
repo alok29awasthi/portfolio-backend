@@ -11,7 +11,7 @@ public class EmailController {
     @Autowired
     private MailService mailService;
 
-    @CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3000/contact"})
+    @CrossOrigin(origins = {"http://localhost:3000", "https://portfolio-awasthi-af5a08f59471.herokuapp.com/"})
     @PostMapping("/send-email")
     public String sendEmail(@RequestBody FormDataDTO formDataDTO) {
         if (mailService.sendEmail(formDataDTO)) {
