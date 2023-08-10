@@ -4,6 +4,10 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'  // Change to the latest compatible version
 }
 
+bootJar {
+	mainClassName = 'com/aa/resume/ResumeApplication.java'
+}
+
 group = 'com.aa'
 version = '0.0.1-SNAPSHOT'
 
